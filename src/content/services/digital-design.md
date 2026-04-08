@@ -1,10 +1,8 @@
 ---
-title: "Digital Design"
-description: "Designing digital experiences that are beautiful, intuitive, and built for performance — websites, apps, and interactive platforms."
+title: "Digital Design & Dev"
+description: "Websites and digital products that look premium, load fast, and actually convert. Because a beautiful site that doesn't perform is just an expensive art project."
 icon: "monitor"
 order: 3
 ---
 
-I design and build digital experiences that balance aesthetics with usability. From marketing websites to complex web applications, every project is designed mobile-first, optimized for performance, and built with clean, maintainable code.
-
-Services include UI/UX design, responsive web design, prototyping, design systems, and front-end development.
+UI/UX design, responsive web, prototyping, design systems, and front-end development. Everything is designed mobile-first, obsessed over in Figma, and built with clean, maintainable code. Performance isn't an afterthought — it's the point.

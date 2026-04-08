@@ -1,6 +1,6 @@
 ---
 // ─────────────────────────────────────────────────────────
-// Contact — Bratus-style: direct, information-rich
+// Contact — Bold CTA, personality-driven
 // ─────────────────────────────────────────────────────────
 
 import Base from "@layouts/Base.astro";
@@ -8,13 +8,13 @@ import ContactForm from "@components/ContactForm.astro";
 import contact from "@data/contact.json";
 ---
 
-<Base title="Contact" description="Get in touch with Ronij Barahi.">
+<Base title="Contact" description="Get in touch with Ronij Barahi. Ambitious projects only.">
 
   <!-- Hero -->
   <section class="page-container pt-16 md:pt-26 pb-18 md:pb-30">
-    <h1 class="text-display-lg max-w-4xl mb-8">Let&rsquo;s create something together</h1>
+    <h1 class="text-display-lg max-w-4xl mb-8">Let&rsquo;s make<br />something that matters.</h1>
     <p class="text-body-xl text-brand-mid-grey max-w-2xl">
-      Whether you have a fully formed brief or just the spark of an idea, I&rsquo;d love to hear from you.
+      Got a brand that needs building, a product that needs polish, or an idea that won&rsquo;t let you sleep? I&rsquo;m listening.
     </p>
   </section>
 
@@ -23,35 +23,35 @@ import contact from "@data/contact.json";
     <div class="page-container section-gap">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
 
-        <!-- Left: contact details -->
+        <!-- Left: details -->
         <div class="lg:col-span-5">
           <div class="space-y-10">
             <div>
-              <p class="text-micro uppercase text-brand-dark-grey mb-3">Email</p>
+              <p class="text-micro uppercase text-brand-dark-grey mb-3">Drop a line</p>
               <a href={`mailto:${contact.email}`} class="text-heading-lg text-brand-off-white link-underline">
                 {contact.email}
               </a>
             </div>
 
             <div>
-              <p class="text-micro uppercase text-brand-dark-grey mb-3">Phone</p>
+              <p class="text-micro uppercase text-brand-dark-grey mb-3">Call me maybe</p>
               <a href={`tel:${contact.phone.replace(/\D/g, "")}`} class="text-heading text-brand-off-white link-underline">
                 {contact.phone}
               </a>
             </div>
 
             <div>
-              <p class="text-micro uppercase text-brand-dark-grey mb-3">Location</p>
+              <p class="text-micro uppercase text-brand-dark-grey mb-3">Home base</p>
               <p class="text-body-lg text-brand-light-grey">{contact.location}</p>
             </div>
 
             <div>
-              <p class="text-micro uppercase text-brand-dark-grey mb-3">Availability</p>
+              <p class="text-micro uppercase text-brand-dark-grey mb-3">Status</p>
               <p class="text-body-lg text-brand-light-grey">{contact.availability}</p>
             </div>
 
             <div>
-              <p class="text-micro uppercase text-brand-dark-grey mb-4">Social</p>
+              <p class="text-micro uppercase text-brand-dark-grey mb-4">Stalk me (politely)</p>
               <div class="flex flex-wrap gap-x-6 gap-y-2">
                 {Object.entries(contact.social).map(([platform, url]) => (
                   <a
@@ -70,7 +70,7 @@ import contact from "@data/contact.json";
 
         <!-- Right: form -->
         <div class="lg:col-span-7 lg:pl-8">
-          <p class="text-micro uppercase text-brand-dark-grey mb-8">Send a Message</p>
+          <p class="text-micro uppercase text-brand-dark-grey mb-8">Or just fill this out</p>
           <ContactForm />
         </div>
 

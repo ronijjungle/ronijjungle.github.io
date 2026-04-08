@@ -1,27 +1,25 @@
 ---
-# ─────────────────────────────────────────
-# About Content — edit this file to update
-# the About page. No code changes needed.
-# ─────────────────────────────────────────
-headline: "Designing with intention, building with precision"
-subheadline: "Creative Designer & Brand Strategist"
+headline: "I build brands that punch above their weight."
+subheadline: "Creative Director & Co-Founder"
 portrait: "/images/portrait.jpg"
 resumeLink: "/ronij-barahi-resume.pdf"
 stats:
-  - label: "Years Experience"
-    value: "5+"
-  - label: "Projects Delivered"
-    value: "40+"
-  - label: "Happy Clients"
-    value: "25+"
-  - label: "Awards"
-    value: "8"
+  - label: "Global Clients"
+    value: "100+"
+  - label: "Designers Led"
+    value: "10+"
+  - label: "Years Deep"
+    value: "7+"
+  - label: "Countries Reached"
+    value: "15+"
 ---
 
-I'm Ronij Barahi — a multidisciplinary creative designer and strategist based in New York. I believe that great design isn't just about how things look; it's about how they work, feel, and communicate.
+Most creative directors talk about their "journey." I'll spare you the TED talk.
 
-My approach sits at the intersection of strategy and aesthetics. Every project begins with understanding — the brand, the audience, the goals — and translates that understanding into visual systems that are both beautiful and functional.
+Here's the short version: I started designing because I couldn't stop. Turned that obsession into Jungle — a creative agency in Kathmandu that's worked with 100+ clients across the globe, from scrappy startups to legacy brands like Volkswagen and Kantipur.
 
-Over the past five years, I've had the privilege of working with startups, agencies, and established brands to craft identities, digital experiences, and creative campaigns that leave a lasting impression.
+I lead teams of 10+ designers, and my job is simple: make sure every pixel, every word, and every strategy decision actually means something. No decoration for decoration's sake. No trends for trend's sake. Just work that works.
 
-When I'm not designing, you'll find me exploring typography, studying architecture, or experimenting with new creative tools.
+My sweet spot is where brand strategy meets visual identity meets "holy shit, that actually converted." I believe design should be beautiful AND effective — and if it's not doing both, we're not done yet.
+
+When I'm not directing creative, I'm probably dissecting a brand identity I found on some corner of the internet, arguing about type pairings, or building something new that probably should have stayed a side project.

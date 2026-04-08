@@ -1,10 +1,8 @@
 ---
 title: "Visual Identity"
-description: "Crafting the visual language of your brand — logo, color, typography, and the system that ties them together into something unmistakable."
+description: "The logo is just the handshake. I build the entire visual language — mark, type, color, system — so your brand is unmistakable whether it's on a billboard or a browser tab."
 icon: "palette"
 order: 2
 ---
 
-Your visual identity is how the world recognizes you. I design comprehensive identity systems — logos, color palettes, typography pairings, iconography, and brand guidelines — that are distinctive, flexible, and built to last.
-
-Every identity is delivered with a complete brand guidelines document so your team can apply it consistently across every touchpoint.
+Logos, color systems, typography pairings, iconography, guidelines — the full toolkit. Every identity ships with a brand guidelines document, because consistency is the difference between a brand and a nice Dribbble shot.

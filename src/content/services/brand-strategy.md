@@ -1,10 +1,8 @@
 ---
 title: "Brand Strategy"
-description: "Defining the 'why' behind your brand. I uncover positioning, messaging, and audience insights that become the foundation for everything visual."
+description: "Before a single pixel gets pushed, we figure out why your brand exists, who it's for, and how it's going to win. Positioning, messaging, audience — the stuff that separates brands from logos."
 icon: "compass"
 order: 1
 ---
 
-Every great brand starts with a clear strategy. I work with you to define your brand's core purpose, competitive positioning, and audience personas — creating a strategic foundation that guides every creative decision that follows.
-
-This includes brand audits, positioning workshops, competitive analysis, messaging frameworks, and brand architecture.
+This isn't about vision boards and vibes. It's research, positioning workshops, competitive audits, and messaging frameworks that give every creative decision a backbone. Strategy is the reason some brands feel inevitable — and others feel forgettable.

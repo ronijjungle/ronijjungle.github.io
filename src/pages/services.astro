@@ -1,7 +1,6 @@
 ---
 // ─────────────────────────────────────────────────────────
-// Services — Bratus-style clean service listing
-// Left: heading. Right: list of services with details.
+// Services — Bold, opinionated copy
 // ─────────────────────────────────────────────────────────
 
 import Base from "@layouts/Base.astro";
@@ -12,14 +11,14 @@ const services = (await getCollection("services")).sort(
 );
 ---
 
-<Base title="Services" description="Creative services by Ronij Barahi.">
+<Base title="Services" description="What Ronij Barahi actually does — and does well.">
 
   <!-- Hero -->
   <section class="page-container pt-16 md:pt-26 pb-18 md:pb-30">
     <div class="max-w-4xl">
-      <h1 class="text-display-lg mb-8">What I can do for you</h1>
+      <h1 class="text-display-lg mb-8">Here&rsquo;s what I&rsquo;m<br />actually good at.</h1>
       <p class="text-body-xl text-brand-mid-grey max-w-2xl">
-        End-to-end creative services from strategy to execution. Every engagement is tailored to your brand's unique needs.
+        Not a jack of all trades. A master of the ones that move the needle. Every engagement is built around your brand&rsquo;s specific goals — not a one-size-fits-all package.
       </p>
     </div>
   </section>
@@ -58,15 +57,16 @@ const services = (await getCollection("services")).sort(
     <div class="page-container section-gap">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
         <div class="lg:col-span-4">
-          <h2>Process</h2>
+          <h2>How It<br />Actually Works</h2>
+          <p class="text-body text-brand-mid-grey mt-4">No 47-step framework. Just a process that ships.</p>
         </div>
         <div class="lg:col-span-8">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 reveal">
             {[
-              { step: "01", title: "Discover", text: "Understanding your brand, audience, and goals through research and conversation." },
-              { step: "02", title: "Define", text: "Translating insights into a clear creative strategy and project roadmap." },
-              { step: "03", title: "Design", text: "Crafting visual solutions through iterative design and close collaboration." },
-              { step: "04", title: "Deliver", text: "Finalizing assets and providing everything needed for seamless implementation." },
+              { step: "01", title: "Listen", text: "I shut up and learn your brand, your audience, and your actual goals. Not what you think sounds good — what actually matters." },
+              { step: "02", title: "Map It Out", text: "Insights become strategy. Strategy becomes a roadmap. You know exactly what's happening, when, and why." },
+              { step: "03", title: "Build It", text: "Iterative design, tight feedback loops, zero disappearing acts. You see progress, not just a reveal at the end." },
+              { step: "04", title: "Ship It", text: "Final assets, guidelines, handoffs — everything your team needs to run with it. Then I stick around to make sure nothing breaks." },
             ].map((item) => (
               <div>
                 <span class="text-micro text-brand-dark-grey">{item.step}</span>
@@ -83,15 +83,15 @@ const services = (await getCollection("services")).sort(
   <!-- CTA -->
   <section class="divider">
     <div class="page-container section-gap text-center">
-      <h2 class="mb-6">Ready to start?</h2>
+      <h2 class="mb-4">Sound like a fit?</h2>
       <p class="text-body-lg text-brand-mid-grey mb-10 max-w-lg mx-auto">
-        Every great project starts with a conversation.
+        I&rsquo;m not for everyone. But if you want work that actually performs — let&rsquo;s talk.
       </p>
       <a
         href="/contact"
-        class="inline-flex items-center gap-2 px-8 py-3 border border-brand-off-white text-brand-off-white text-caption font-semibold hover:bg-brand-off-white hover:text-brand-black transition-colors duration-200"
+        class="inline-flex items-center gap-2 px-8 py-3 bg-brand-off-white text-brand-black text-caption uppercase font-semibold hover:bg-brand-light-grey transition-colors duration-200"
       >
-        Get in Touch
+        Start a project &rarr;
       </a>
     </div>
   </section>

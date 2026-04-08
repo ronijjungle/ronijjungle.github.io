@@ -1,6 +1,6 @@
 ---
 // ─────────────────────────────────────────────────────────
-// Testimonials — Bratus-inspired client voices page
+// Testimonials — Client voices with personality
 // ─────────────────────────────────────────────────────────
 
 import Base from "@layouts/Base.astro";
@@ -15,7 +15,10 @@ const testimonials = (await getCollection("testimonials")).sort(
 
   <!-- Hero -->
   <section class="page-container pt-16 md:pt-26 pb-18 md:pb-30">
-    <h1 class="text-display-lg max-w-4xl">Kind words from clients</h1>
+    <h1 class="text-display-lg max-w-4xl mb-6">Don&rsquo;t take<br />my word for it.</h1>
+    <p class="text-body-xl text-brand-mid-grey max-w-2xl">
+      Here&rsquo;s what happens when you let me loose on your brand.
+    </p>
   </section>
 
   <!-- Testimonials -->
@@ -42,17 +45,33 @@ const testimonials = (await getCollection("testimonials")).sort(
     </div>
   </section>
 
-  <!-- Selected Clients -->
+  <!-- Clients -->
   <section class="divider bg-brand-off-black">
     <div class="page-container section-gap">
-      <p class="text-micro uppercase text-brand-dark-grey mb-12">Selected Clients</p>
+      <p class="text-micro uppercase text-brand-dark-grey mb-12">Brands I&rsquo;ve worked with</p>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6 reveal">
-        {["Luxe Botanicals", "Nova Architecture", "Arc Festival", "Ember Studios", "Meridian Group", "Forma Collective"].map((client) => (
+        {["Volkswagen", "Kantipur", "Luxe Botanicals", "Nova Architecture", "Arc Festival", "Ember Studios"].map((client) => (
           <div class="py-5 divider">
             <span class="text-heading text-brand-dark-grey font-semibold">{client}</span>
           </div>
         ))}
       </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="divider">
+    <div class="page-container section-gap text-center">
+      <h2 class="mb-4">Want to be next?</h2>
+      <p class="text-body-lg text-brand-mid-grey mb-10 max-w-lg mx-auto">
+        The best testimonial is the one we haven&rsquo;t written yet.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 px-8 py-3 bg-brand-off-white text-brand-black text-caption uppercase font-semibold hover:bg-brand-light-grey transition-colors duration-200"
+      >
+        Start a project &rarr;
+      </a>
     </div>
   </section>
 

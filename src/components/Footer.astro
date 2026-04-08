@@ -1,9 +1,6 @@
 ---
 // ─────────────────────────────────────────────────────────
-// Footer — Bratus-style multi-column layout
-//
-// Logo + physical details + contact + social.
-// Clean, informational, no decoration.
+// Footer — Multi-column, personality in the details
 // ─────────────────────────────────────────────────────────
 
 import contact from "@data/contact.json";
@@ -11,30 +8,29 @@ import contact from "@data/contact.json";
 
 <footer class="divider">
   <div class="page-container py-14 md:py-18">
-    <!-- Top row: 4-column grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
 
-      <!-- Brand -->
       <div>
         <a href="/" class="text-brand-off-white font-semibold text-lg tracking-tight inline-block mb-4">
           Ronij Barahi<span class="text-brand-mid-grey align-super text-[0.5rem] ml-0.5">&reg;</span>
         </a>
         <p class="text-caption text-brand-dark-grey leading-relaxed">
-          Creative Designer<br />&amp; Brand Strategist
+          Creative Director<br />&amp; Co-Founder at Jungle
         </p>
       </div>
 
-      <!-- Location -->
       <div>
-        <p class="text-micro uppercase text-brand-dark-grey mb-3">Location</p>
+        <p class="text-micro uppercase text-brand-dark-grey mb-3">Home base</p>
         <p class="text-caption text-brand-mid-grey leading-relaxed">
           {contact.location}
         </p>
+        <p class="text-caption text-brand-dark-grey mt-2 leading-relaxed">
+          Working with clients globally.
+        </p>
       </div>
 
-      <!-- Contact -->
       <div>
-        <p class="text-micro uppercase text-brand-dark-grey mb-3">Contact</p>
+        <p class="text-micro uppercase text-brand-dark-grey mb-3">Say hello</p>
         <ul class="space-y-1.5">
           <li>
             <a href={`mailto:${contact.email}`} class="text-caption text-brand-mid-grey hover:text-brand-off-white transition-colors">
@@ -49,9 +45,8 @@ import contact from "@data/contact.json";
         </ul>
       </div>
 
-      <!-- Social -->
       <div>
-        <p class="text-micro uppercase text-brand-dark-grey mb-3">Social</p>
+        <p class="text-micro uppercase text-brand-dark-grey mb-3">Elsewhere</p>
         <ul class="space-y-1.5">
           {Object.entries(contact.social).map(([platform, url]) => (
             <li>
@@ -60,7 +55,6 @@ import contact from "@data/contact.json";
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-caption text-brand-mid-grey hover:text-brand-off-white transition-colors"
-                aria-label={`${platform} profile`}
               >
                 {platform.charAt(0).toUpperCase() + platform.slice(1)}
               </a>
@@ -70,10 +64,9 @@ import contact from "@data/contact.json";
       </div>
     </div>
 
-    <!-- Bottom row -->
     <div class="divider mt-12 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
       <p class="text-micro text-brand-dark-grey">
-        &copy; {new Date().getFullYear()} Ronij Barahi. All rights reserved.
+        &copy; {new Date().getFullYear()} Ronij Barahi. Built with obsession.
       </p>
       <nav class="flex gap-6" aria-label="Footer navigation">
         {[

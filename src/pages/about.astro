@@ -1,9 +1,6 @@
 ---
 // ─────────────────────────────────────────────────────────
-// About — Bratus-style storytelling narrative
-//
-// Large typographic statement → narrative bio →
-// stats → philosophy → clients
+// About — Bold, narrative, personality-driven
 // ─────────────────────────────────────────────────────────
 
 import Base from "@layouts/Base.astro";
@@ -18,11 +15,14 @@ const testimonials = (await getCollection("testimonials")).sort(
 );
 ---
 
-<Base title="About" description="About Ronij Barahi — creative designer and brand strategist.">
+<Base title="About" description="About Ronij Barahi — Creative Director, Co-Founder, and the person behind Jungle.">
 
   <!-- Hero statement -->
   <section class="page-container pt-16 md:pt-26 pb-18 md:pb-30">
     <h1 class="max-w-5xl">{headline}</h1>
+    <p class="text-body-xl text-brand-mid-grey mt-6 max-w-2xl">
+      The person brands call when &ldquo;good enough&rdquo; isn&rsquo;t.
+    </p>
   </section>
 
   <!-- Bio: 2-column layout -->
@@ -30,14 +30,14 @@ const testimonials = (await getCollection("testimonials")).sort(
     <div class="page-container section-gap">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-8">
 
-        <!-- Left: portrait placeholder -->
+        <!-- Portrait -->
         <div class="lg:col-span-5">
           <div class="aspect-[3/4] bg-brand-off-black border border-brand-dark-grey/15 flex items-center justify-center sticky top-24">
             <span class="text-heading text-brand-dark-grey/40">Portrait</span>
           </div>
         </div>
 
-        <!-- Right: narrative -->
+        <!-- Narrative -->
         <div class="lg:col-span-7 lg:pl-8">
           <p class="text-micro uppercase text-brand-dark-grey mb-6">{subheadline}</p>
 
@@ -61,36 +61,65 @@ const testimonials = (await getCollection("testimonials")).sort(
     </div>
   </section>
 
-  <!-- Philosophy -->
+  <!-- Experience / Credibility -->
   <section class="divider bg-brand-off-black">
     <div class="page-container section-gap">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+        <div class="lg:col-span-4">
+          <h2>The Resume,<br />But Make It Short</h2>
+        </div>
+        <div class="lg:col-span-8">
+          <div class="space-y-0 reveal">
+            {[
+              { role: "Creative Director & Co-Founder", company: "Jungle", period: "2020 – Present", note: "Built from zero to 100+ global clients. Still here. Still obsessing." },
+              { role: "Lead Designer", company: "Volkswagen (via agency)", period: "2022", note: "Brand campaign work for one of the world's most recognized marks." },
+              { role: "Brand Strategist", company: "Kantipur Media Group", period: "2021 – 2022", note: "Visual identity and strategic design for Nepal's largest media house." },
+              { role: "Creative Lead", company: "Freelance & Agency Work", period: "2018 – 2020", note: "The \"figure it out\" years. Shipped fast. Learned faster." },
+            ].map((item, i) => (
+              <div class:list={["py-8", i > 0 && "divider"]}>
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                  <h4>{item.role}</h4>
+                  <span class="text-micro text-brand-dark-grey shrink-0">{item.period}</span>
+                </div>
+                <p class="text-caption text-brand-mid-grey">{item.company}</p>
+                <p class="text-body text-brand-dark-grey mt-2">{item.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="divider">
+    <div class="page-container section-gap">
       <div class="max-w-3xl">
-        <p class="text-micro uppercase text-brand-dark-grey mb-8">Philosophy</p>
+        <p class="text-micro uppercase text-brand-dark-grey mb-8">What I believe</p>
         <blockquote class="text-display text-brand-light-grey font-light leading-snug">
-          &ldquo;Design is not just what it looks like. Design is how it works, how it feels, and the story it tells.&rdquo;
+          &ldquo;Strategy without design is a boardroom fantasy. Design without strategy is expensive decoration. I do both — so neither gets wasted.&rdquo;
         </blockquote>
       </div>
     </div>
   </section>
 
   <!-- Clients / Testimonials -->
-  <section class="divider">
+  <section class="divider bg-brand-off-black">
     <div class="page-container section-gap">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
         <div class="lg:col-span-4">
-          <h2>Clients</h2>
+          <h2>People I&rsquo;ve<br />Worked With</h2>
+          <p class="text-body text-brand-mid-grey mt-4">And what some of them said after.</p>
         </div>
         <div class="lg:col-span-8">
-          <!-- Client logos (text placeholder) -->
           <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-18 reveal">
-            {["Luxe Botanicals", "Nova Architecture", "Arc Festival", "Ember Studios", "Meridian Group", "Forma Collective"].map((name) => (
+            {["Volkswagen", "Kantipur", "Luxe Botanicals", "Nova Architecture", "Arc Festival", "Ember Studios"].map((name) => (
               <div class="py-6 divider flex items-center">
                 <span class="text-heading text-brand-dark-grey font-semibold">{name}</span>
               </div>
             ))}
           </div>
 
-          <!-- Quotes -->
           <div class="space-y-12 reveal">
             {testimonials.map((t) => (
               <blockquote class="divider pt-8">
@@ -107,6 +136,22 @@ const testimonials = (await getCollection("testimonials")).sort(
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="divider">
+    <div class="page-container section-gap text-center">
+      <h2 class="mb-4">Seen enough?</h2>
+      <p class="text-body-lg text-brand-mid-grey mb-10 max-w-lg mx-auto">
+        I&rsquo;m always up for a good project, a great conversation, or a terrible coffee recommendation.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 px-8 py-3 bg-brand-off-white text-brand-black text-caption uppercase font-semibold hover:bg-brand-light-grey transition-colors duration-200"
+      >
+        Let&rsquo;s talk &rarr;
+      </a>
     </div>
   </section>
 
