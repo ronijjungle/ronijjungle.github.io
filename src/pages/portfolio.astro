@@ -18,12 +18,12 @@ const categories = [...new Set(projects.map((p) => p.data.category))];
 
 <Base title="Work" description="Selected projects by Ronij Barahi.">
 
-  <section class="page-container section-gap">
-    <!-- Header row -->
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14 md:mb-18">
+  <!-- Hero (BLACK) -->
+  <section class="bg-brand-black page-container pt-16 md:pt-26 pb-18 md:pb-30">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
       <div>
         <p class="text-micro uppercase text-brand-dark-grey mb-3">The work</p>
-        <h1 class="text-display-lg">Proof over promises.</h1>
+        <h1 class="text-display-lg text-brand-off-white">Proof over promises.</h1>
         <p class="text-body text-brand-mid-grey mt-3 max-w-lg">Here&rsquo;s a selection of projects I&rsquo;m proud of. The rest are under NDA — or I&rsquo;d have to kill you.</p>
       </div>
       <!-- Category labels -->
@@ -35,19 +35,24 @@ const categories = [...new Set(projects.map((p) => p.data.category))];
         ))}
       </div>
     </div>
+  </section>
 
-    <!-- Project Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-14 md:gap-y-18 reveal">
-      {projects.map((project) => (
-        <ProjectCard
-          title={project.data.title}
-          description={project.data.description}
-          category={project.data.category}
-          year={project.data.year}
-          tags={project.data.tags}
-          slug={project.slug}
-        />
-      ))}
+  <!-- Project Grid (WHITE) -->
+  <section class="bg-brand-off-white border-t border-brand-black/10">
+    <div class="page-container section-gap">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-14 md:gap-y-18 reveal">
+        {projects.map((project) => (
+          <ProjectCard
+            title={project.data.title}
+            description={project.data.description}
+            category={project.data.category}
+            year={project.data.year}
+            tags={project.data.tags}
+            slug={project.slug}
+            variant="light"
+          />
+        ))}
+      </div>
     </div>
   </section>
 

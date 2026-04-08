@@ -24,8 +24,8 @@ const featuredTestimonial = testimonials[0];
 
 <Base title="Home" description="Ronij Barahi — Creative Director & Co-Founder at Jungle. Brand strategy, visual identity, and creative direction for 100+ global clients. Based in Kathmandu, Nepal.">
 
-  <!-- ── HERO ── -->
-  <section class="page-container pt-16 md:pt-26 pb-22 md:pb-36">
+  <!-- ── HERO (BLACK) ── -->
+  <section class="bg-brand-black page-container pt-16 md:pt-26 pb-22 md:pb-36">
     <div class="max-w-5xl">
       <!-- Micro label -->
       <p class="text-micro uppercase text-brand-dark-grey mb-8 animate-fade-up">
@@ -33,7 +33,7 @@ const featuredTestimonial = testimonials[0];
       </p>
 
       <!-- Main statement -->
-      <h1 class="mb-10 md:mb-14 animate-fade-up" style="animation-delay: 100ms;">
+      <h1 class="text-brand-off-white mb-10 md:mb-14 animate-fade-up" style="animation-delay: 100ms;">
         I don&rsquo;t make<br />
         pretty things.<br />
         I make them<br />
@@ -63,39 +63,39 @@ const featuredTestimonial = testimonials[0];
     </div>
   </section>
 
-  <!-- ── CREDIBILITY BAR ── -->
-  <section class="divider">
+  <!-- ── CREDIBILITY BAR (WHITE) ── -->
+  <section class="bg-brand-off-white border-t border-brand-black/10">
     <div class="page-container py-10 md:py-14">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
         <div>
-          <p class="text-display text-brand-off-white">100+</p>
+          <p class="text-display text-brand-black">100+</p>
           <p class="text-micro uppercase text-brand-dark-grey mt-1">Global clients</p>
         </div>
         <div>
-          <p class="text-display text-brand-off-white">10+</p>
+          <p class="text-display text-brand-black">10+</p>
           <p class="text-micro uppercase text-brand-dark-grey mt-1">Designers led</p>
         </div>
         <div>
-          <p class="text-display text-brand-off-white">7+</p>
+          <p class="text-display text-brand-black">7+</p>
           <p class="text-micro uppercase text-brand-dark-grey mt-1">Years in the game</p>
         </div>
         <div>
-          <p class="text-display text-brand-off-white">∞</p>
+          <p class="text-display text-brand-black">∞</p>
           <p class="text-micro uppercase text-brand-dark-grey mt-1">Cups of coffee</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── SELECTED WORK ── -->
-  <section class="divider bg-brand-cream">
+  <!-- ── SELECTED WORK (BLACK) ── -->
+  <section class="bg-brand-black border-t border-brand-dark-grey/25">
     <div class="page-container section-gap">
       <div class="flex items-baseline justify-between mb-14 md:mb-18">
         <div>
-          <h2 class="text-brand-black">Selected Work</h2>
-          <p class="text-body text-brand-dark-grey mt-3">The ones I&rsquo;m actually allowed to show you.</p>
+          <h2 class="text-brand-off-white">Selected Work</h2>
+          <p class="text-body text-brand-mid-grey mt-3">The ones I&rsquo;m actually allowed to show you.</p>
         </div>
-        <a href="/portfolio" class="text-caption text-brand-dark-grey link-underline hover:text-brand-black hidden md:inline-block">
+        <a href="/portfolio" class="text-caption text-brand-mid-grey link-underline hover:text-brand-off-white hidden md:inline-block">
           See all
         </a>
       </div>
@@ -109,45 +109,45 @@ const featuredTestimonial = testimonials[0];
             year={project.data.year}
             tags={project.data.tags}
             slug={project.slug}
-            variant="light"
+            variant="dark"
           />
         ))}
       </div>
 
       <div class="mt-14 md:hidden">
-        <a href="/portfolio" class="text-caption text-brand-dark-grey link-underline hover:text-brand-black">
+        <a href="/portfolio" class="text-caption text-brand-mid-grey link-underline hover:text-brand-off-white">
           See all work &rarr;
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ── SERVICES ── -->
-  <section class="divider bg-brand-off-black">
+  <!-- ── SERVICES (WHITE) ── -->
+  <section class="bg-brand-off-white border-t border-brand-black/10">
     <div class="page-container section-gap">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
         <div class="lg:col-span-4">
-          <h2>What I Do</h2>
-          <p class="text-body text-brand-mid-grey mt-4">
+          <h2 class="text-brand-black">What I Do</h2>
+          <p class="text-body text-brand-dark-grey mt-4">
             Not a jack of all trades.<br />A master of the ones that matter.
           </p>
         </div>
         <div class="lg:col-span-8">
           <div class="reveal">
             {services.map((service, i) => (
-              <div class:list={["py-6 flex items-start gap-6", i > 0 && "divider"]}>
+              <div class:list={["py-6 flex items-start gap-6", i > 0 && "border-t border-brand-black/10"]}>
                 <span class="text-micro text-brand-dark-grey mt-1 shrink-0 w-6">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h4 class="mb-2">{service.data.title}</h4>
-                  <p class="text-body text-brand-mid-grey">{service.data.description}</p>
+                  <h4 class="text-brand-black mb-2">{service.data.title}</h4>
+                  <p class="text-body text-brand-dark-grey">{service.data.description}</p>
                 </div>
               </div>
             ))}
           </div>
           <div class="mt-8">
-            <a href="/services" class="text-caption text-brand-mid-grey link-underline hover:text-brand-off-white">
+            <a href="/services" class="text-caption text-brand-dark-grey link-underline hover:text-brand-black">
               The full menu &rarr;
             </a>
           </div>
@@ -156,8 +156,8 @@ const featuredTestimonial = testimonials[0];
     </div>
   </section>
 
-  <!-- ── PHILOSOPHY ── -->
-  <section class="divider">
+  <!-- ── PHILOSOPHY (BLACK) ── -->
+  <section class="bg-brand-black border-t border-brand-dark-grey/25">
     <div class="page-container section-gap">
       <div class="max-w-3xl">
         <p class="text-micro uppercase text-brand-dark-grey mb-8">Philosophy</p>
@@ -168,17 +168,17 @@ const featuredTestimonial = testimonials[0];
     </div>
   </section>
 
-  <!-- ── TESTIMONIAL ── -->
+  <!-- ── TESTIMONIAL (WHITE) ── -->
   {featuredTestimonial && (
-    <section class="divider bg-brand-off-black">
+    <section class="bg-brand-off-white border-t border-brand-black/10">
       <div class="page-container section-gap">
         <div class="max-w-3xl mx-auto text-center">
           <p class="text-micro uppercase text-brand-dark-grey mb-8">Kind words</p>
-          <p class="text-display text-brand-light-grey font-light leading-snug mb-8">
+          <p class="text-display text-brand-black font-light leading-snug mb-8">
             &ldquo;{featuredTestimonial.data.quote}&rdquo;
           </p>
           <div>
-            <p class="text-caption font-semibold text-brand-off-white">{featuredTestimonial.data.name}</p>
+            <p class="text-caption font-semibold text-brand-black">{featuredTestimonial.data.name}</p>
             <p class="text-micro text-brand-dark-grey mt-1">
               {featuredTestimonial.data.role}, {featuredTestimonial.data.company}
             </p>
@@ -188,11 +188,11 @@ const featuredTestimonial = testimonials[0];
     </section>
   )}
 
-  <!-- ── CTA ── -->
-  <section class="divider">
+  <!-- ── CTA (BLACK) ── -->
+  <section class="bg-brand-black border-t border-brand-dark-grey/25">
     <div class="page-container section-gap text-center">
       <p class="text-micro uppercase text-brand-dark-grey mb-6">What are you waiting for?</p>
-      <h2 class="mb-4">Got a project?<br />Let&rsquo;s make it dangerous.</h2>
+      <h2 class="text-brand-off-white mb-4">Got a project?<br />Let&rsquo;s make it dangerous.</h2>
       <p class="text-body-lg text-brand-mid-grey mb-10 max-w-lg mx-auto">
         I&rsquo;m always down for ambitious brands, wild ideas, and people who don&rsquo;t settle for &ldquo;good enough.&rdquo;
       </p>

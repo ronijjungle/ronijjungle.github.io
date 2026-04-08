@@ -10,16 +10,16 @@ import contact from "@data/contact.json";
 
 <Base title="Contact" description="Get in touch with Ronij Barahi. Ambitious projects only.">
 
-  <!-- Hero -->
-  <section class="page-container pt-16 md:pt-26 pb-18 md:pb-30">
-    <h1 class="text-display-lg max-w-4xl mb-8">Let&rsquo;s make<br />something that matters.</h1>
+  <!-- Hero (BLACK) -->
+  <section class="bg-brand-black page-container pt-16 md:pt-26 pb-18 md:pb-30">
+    <h1 class="text-display-lg text-brand-off-white max-w-4xl mb-8">Let&rsquo;s make<br />something that matters.</h1>
     <p class="text-body-xl text-brand-mid-grey max-w-2xl">
       Got a brand that needs building, a product that needs polish, or an idea that won&rsquo;t let you sleep? I&rsquo;m listening.
     </p>
   </section>
 
-  <!-- Contact grid -->
-  <section class="divider">
+  <!-- Contact grid (WHITE) -->
+  <section class="bg-brand-off-white border-t border-brand-black/10">
     <div class="page-container section-gap">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
 
@@ -28,26 +28,26 @@ import contact from "@data/contact.json";
           <div class="space-y-10">
             <div>
               <p class="text-micro uppercase text-brand-dark-grey mb-3">Drop a line</p>
-              <a href={`mailto:${contact.email}`} class="text-heading-lg text-brand-off-white link-underline">
+              <a href={`mailto:${contact.email}`} class="text-heading-lg text-brand-black link-underline">
                 {contact.email}
               </a>
             </div>
 
             <div>
               <p class="text-micro uppercase text-brand-dark-grey mb-3">Call me maybe</p>
-              <a href={`tel:${contact.phone.replace(/\D/g, "")}`} class="text-heading text-brand-off-white link-underline">
+              <a href={`tel:${contact.phone.replace(/\D/g, "")}`} class="text-heading text-brand-black link-underline">
                 {contact.phone}
               </a>
             </div>
 
             <div>
               <p class="text-micro uppercase text-brand-dark-grey mb-3">Home base</p>
-              <p class="text-body-lg text-brand-light-grey">{contact.location}</p>
+              <p class="text-body-lg text-brand-black">{contact.location}</p>
             </div>
 
             <div>
               <p class="text-micro uppercase text-brand-dark-grey mb-3">Status</p>
-              <p class="text-body-lg text-brand-light-grey">{contact.availability}</p>
+              <p class="text-body-lg text-brand-black">{contact.availability}</p>
             </div>
 
             <div>
@@ -58,7 +58,7 @@ import contact from "@data/contact.json";
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-caption text-brand-mid-grey link-underline hover:text-brand-off-white"
+                    class="text-caption text-brand-dark-grey link-underline hover:text-brand-black"
                   >
                     {platform.charAt(0).toUpperCase() + platform.slice(1)}
                   </a>
@@ -71,7 +71,7 @@ import contact from "@data/contact.json";
         <!-- Right: form -->
         <div class="lg:col-span-7 lg:pl-8">
           <p class="text-micro uppercase text-brand-dark-grey mb-8">Or just fill this out</p>
-          <ContactForm />
+          <ContactForm variant="light" />
         </div>
 
       </div>

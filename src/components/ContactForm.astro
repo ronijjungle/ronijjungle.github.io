@@ -1,11 +1,19 @@
 ---
 // ─────────────────────────────────────────────────────────
 // Contact Form — Clean, minimal inputs
-// Dark borders, off-white focus, generous spacing.
+// Supports dark and light variants.
 // ─────────────────────────────────────────────────────────
 
-const inputClasses =
-  "w-full bg-transparent border-b border-brand-dark-grey/40 py-4 text-body text-brand-light-grey placeholder:text-brand-dark-grey focus:border-brand-off-white focus:outline-none transition-colors";
+interface Props {
+  variant?: "dark" | "light";
+}
+
+const { variant = "dark" } = Astro.props;
+const isLight = variant === "light";
+
+const inputClasses = isLight
+  ? "w-full bg-transparent border-b border-brand-black/20 py-4 text-body text-brand-black placeholder:text-brand-dark-grey focus:border-brand-black focus:outline-none transition-colors"
+  : "w-full bg-transparent border-b border-brand-dark-grey/40 py-4 text-body text-brand-light-grey placeholder:text-brand-dark-grey focus:border-brand-off-white focus:outline-none transition-colors";
 ---
 
 <form
@@ -66,7 +74,12 @@ const inputClasses =
   <div class="pt-4">
     <button
       type="submit"
-      class="inline-flex items-center gap-2 px-8 py-3 bg-brand-off-white text-brand-black text-caption uppercase font-semibold hover:bg-brand-light-grey transition-colors duration-200"
+      class:list={[
+        "inline-flex items-center gap-2 px-8 py-3 text-caption uppercase font-semibold transition-colors duration-200",
+        isLight
+          ? "bg-brand-black text-brand-off-white hover:bg-brand-off-black"
+          : "bg-brand-off-white text-brand-black hover:bg-brand-light-grey",
+      ]}
     >
       Send Message
       <span aria-hidden="true">&rarr;</span>

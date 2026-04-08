@@ -13,29 +13,29 @@ const testimonials = (await getCollection("testimonials")).sort(
 
 <Base title="Testimonials" description="What clients say about working with Ronij Barahi.">
 
-  <!-- Hero -->
-  <section class="page-container pt-16 md:pt-26 pb-18 md:pb-30">
-    <h1 class="text-display-lg max-w-4xl mb-6">Don&rsquo;t take<br />my word for it.</h1>
+  <!-- Hero (BLACK) -->
+  <section class="bg-brand-black page-container pt-16 md:pt-26 pb-18 md:pb-30">
+    <h1 class="text-display-lg text-brand-off-white max-w-4xl mb-6">Don&rsquo;t take<br />my word for it.</h1>
     <p class="text-body-xl text-brand-mid-grey max-w-2xl">
       Here&rsquo;s what happens when you let me loose on your brand.
     </p>
   </section>
 
-  <!-- Testimonials -->
-  <section class="divider">
+  <!-- Testimonials (WHITE) -->
+  <section class="bg-brand-off-white border-t border-brand-black/10">
     <div class="page-container section-gap">
       <div class="max-w-3xl reveal">
         {testimonials.map((t, i) => (
-          <blockquote class:list={["py-12", i > 0 && "divider"]}>
-            <p class="text-display text-brand-light-grey font-light leading-snug mb-8">
+          <blockquote class:list={["py-12", i > 0 && "border-t border-brand-black/10"]}>
+            <p class="text-display text-brand-black font-light leading-snug mb-8">
               &ldquo;{t.data.quote}&rdquo;
             </p>
             <footer class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-brand-off-black border border-brand-dark-grey/25 flex items-center justify-center">
-                <span class="text-caption text-brand-mid-grey font-semibold">{t.data.name.charAt(0)}</span>
+              <div class="w-10 h-10 rounded-full bg-brand-black/5 border border-brand-black/10 flex items-center justify-center">
+                <span class="text-caption text-brand-dark-grey font-semibold">{t.data.name.charAt(0)}</span>
               </div>
               <div>
-                <cite class="not-italic text-caption text-brand-off-white font-medium block">{t.data.name}</cite>
+                <cite class="not-italic text-caption text-brand-black font-medium block">{t.data.name}</cite>
                 <span class="text-micro text-brand-dark-grey">{t.data.role}, {t.data.company}</span>
               </div>
             </footer>
@@ -45,8 +45,8 @@ const testimonials = (await getCollection("testimonials")).sort(
     </div>
   </section>
 
-  <!-- Clients -->
-  <section class="divider bg-brand-off-black">
+  <!-- Clients (BLACK) -->
+  <section class="bg-brand-black border-t border-brand-dark-grey/25">
     <div class="page-container section-gap">
       <p class="text-micro uppercase text-brand-dark-grey mb-12">Brands I&rsquo;ve worked with</p>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6 reveal">
@@ -59,16 +59,16 @@ const testimonials = (await getCollection("testimonials")).sort(
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="divider">
+  <!-- CTA (WHITE) -->
+  <section class="bg-brand-off-white border-t border-brand-black/10">
     <div class="page-container section-gap text-center">
-      <h2 class="mb-4">Want to be next?</h2>
-      <p class="text-body-lg text-brand-mid-grey mb-10 max-w-lg mx-auto">
+      <h2 class="text-brand-black mb-4">Want to be next?</h2>
+      <p class="text-body-lg text-brand-dark-grey mb-10 max-w-lg mx-auto">
         The best testimonial is the one we haven&rsquo;t written yet.
       </p>
       <a
         href="/contact"
-        class="inline-flex items-center gap-2 px-8 py-3 bg-brand-off-white text-brand-black text-caption uppercase font-semibold hover:bg-brand-light-grey transition-colors duration-200"
+        class="inline-flex items-center gap-2 px-8 py-3 bg-brand-black text-brand-off-white text-caption uppercase font-semibold hover:bg-brand-off-black transition-colors duration-200"
       >
         Start a project &rarr;
       </a>
