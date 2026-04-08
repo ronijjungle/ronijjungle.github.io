@@ -19,6 +19,7 @@ export default {
           "light-grey": "#E6E6E6",
           "paper-grey": "#F2F2F2",
           "off-white": "#FDFDFD",
+          "cream": "#F9F6EE",
         },
       },
 

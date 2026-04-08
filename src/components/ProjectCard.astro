@@ -2,8 +2,7 @@
 // ─────────────────────────────────────────────────────────
 // Project Card — Bratus-style work listing
 //
-// Title + category + service tags. Entire card is clickable.
-// Minimal chrome — content speaks for itself.
+// Supports both dark and light backgrounds via `variant` prop.
 // ─────────────────────────────────────────────────────────
 
 interface Props {
@@ -13,17 +12,29 @@ interface Props {
   year: string;
   tags: string[];
   slug: string;
+  variant?: "dark" | "light";
 }
 
-const { title, description, category, year, tags, slug } = Astro.props;
+const { title, description, category, year, tags, slug, variant = "dark" } = Astro.props;
+const isLight = variant === "light";
 ---
 
 <article class="group">
   <a href={`/portfolio/${slug}`} class="block">
     <!-- Image area -->
-    <div class="aspect-[16/10] bg-brand-off-black border border-brand-dark-grey/15 mb-5 overflow-hidden relative group-hover:border-brand-dark-grey/40 transition-colors duration-300">
+    <div class:list={[
+      "aspect-[16/10] mb-5 overflow-hidden relative transition-colors duration-300",
+      isLight
+        ? "bg-brand-black/5 border border-brand-black/10 group-hover:border-brand-black/25"
+        : "bg-brand-off-black border border-brand-dark-grey/15 group-hover:border-brand-dark-grey/40",
+    ]}>
       <div class="absolute inset-0 flex items-center justify-center">
-        <span class="text-heading text-brand-dark-grey/50 group-hover:text-brand-dark-grey transition-colors duration-300">
+        <span class:list={[
+          "text-heading transition-colors duration-300",
+          isLight
+            ? "text-brand-black/15 group-hover:text-brand-black/30"
+            : "text-brand-dark-grey/50 group-hover:text-brand-dark-grey",
+        ]}>
           {title}
         </span>
       </div>
@@ -31,22 +42,30 @@ const { title, description, category, year, tags, slug } = Astro.props;
 
     <!-- Meta -->
     <div class="flex items-start justify-between gap-4 mb-2">
-      <h3 class="text-heading-lg group-hover:text-brand-light-grey transition-colors duration-200">
+      <h3 class:list={[
+        "text-heading-lg transition-colors duration-200",
+        isLight
+          ? "text-brand-black group-hover:text-brand-dark-grey"
+          : "text-brand-off-white group-hover:text-brand-light-grey",
+      ]}>
         {title}
       </h3>
-      <span class="text-micro text-brand-dark-grey mt-1.5 shrink-0">{year}</span>
+      <span class:list={[
+        "text-micro mt-1.5 shrink-0",
+        isLight ? "text-brand-dark-grey" : "text-brand-dark-grey",
+      ]}>{year}</span>
     </div>
 
     <!-- Category + tags row -->
     <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
-      <span class="text-caption text-brand-mid-grey">{category}</span>
+      <span class:list={["text-caption", isLight ? "text-brand-dark-grey" : "text-brand-mid-grey"]}>{category}</span>
       {tags.length > 0 && (
         <>
-          <span class="text-brand-dark-grey/40" aria-hidden="true">/</span>
+          <span class:list={[isLight ? "text-brand-black/20" : "text-brand-dark-grey/40"]} aria-hidden="true">/</span>
           {tags.map((tag, i) => (
             <>
-              <span class="text-caption text-brand-dark-grey">{tag}</span>
-              {i < tags.length - 1 && <span class="text-brand-dark-grey/30" aria-hidden="true">,</span>}
+              <span class:list={["text-caption", isLight ? "text-brand-mid-grey" : "text-brand-dark-grey"]}>{tag}</span>
+              {i < tags.length - 1 && <span class:list={[isLight ? "text-brand-black/15" : "text-brand-dark-grey/30"]} aria-hidden="true">,</span>}
             </>
           ))}
         </>

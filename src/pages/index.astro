@@ -22,7 +22,7 @@ const testimonials = (await getCollection("testimonials")).sort(
 const featuredTestimonial = testimonials[0];
 ---
 
-<Base title="Home">
+<Base title="Home" description="Ronij Barahi — Creative Director & Co-Founder at Jungle. Brand strategy, visual identity, and creative direction for 100+ global clients. Based in Kathmandu, Nepal.">
 
   <!-- ── HERO ── -->
   <section class="page-container pt-16 md:pt-26 pb-22 md:pb-36">
@@ -88,14 +88,14 @@ const featuredTestimonial = testimonials[0];
   </section>
 
   <!-- ── SELECTED WORK ── -->
-  <section class="divider">
+  <section class="divider bg-brand-cream">
     <div class="page-container section-gap">
       <div class="flex items-baseline justify-between mb-14 md:mb-18">
         <div>
-          <h2>Selected Work</h2>
-          <p class="text-body text-brand-mid-grey mt-3">The ones I&rsquo;m actually allowed to show you.</p>
+          <h2 class="text-brand-black">Selected Work</h2>
+          <p class="text-body text-brand-dark-grey mt-3">The ones I&rsquo;m actually allowed to show you.</p>
         </div>
-        <a href="/portfolio" class="text-caption text-brand-mid-grey link-underline hover:text-brand-off-white hidden md:inline-block">
+        <a href="/portfolio" class="text-caption text-brand-dark-grey link-underline hover:text-brand-black hidden md:inline-block">
           See all
         </a>
       </div>
@@ -109,12 +109,13 @@ const featuredTestimonial = testimonials[0];
             year={project.data.year}
             tags={project.data.tags}
             slug={project.slug}
+            variant="light"
           />
         ))}
       </div>
 
       <div class="mt-14 md:hidden">
-        <a href="/portfolio" class="text-caption text-brand-mid-grey link-underline hover:text-brand-off-white">
+        <a href="/portfolio" class="text-caption text-brand-dark-grey link-underline hover:text-brand-black">
           See all work &rarr;
         </a>
       </div>

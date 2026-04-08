@@ -1,9 +1,6 @@
 ---
 // ─────────────────────────────────────────────────────────
-// Base Layout — "Presentation System"
-//
-// Master template: dark background, Space Grotesk typeface,
-// minimal chrome, content-first.
+// Base Layout — SEO-optimized presentation system
 // ─────────────────────────────────────────────────────────
 
 import Header from "@components/Header.astro";
@@ -13,12 +10,48 @@ import "@styles/global.css";
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
 }
 
 const {
   title,
-  description = "Ronij Barahi — Creative Designer & Strategist. Crafting premium brand experiences through strategy, design, and creative direction.",
+  description = "Ronij Barahi — Creative Director & Co-Founder at Jungle. Brand strategy, visual identity, and creative direction for ambitious brands. Based in Kathmandu, working globally.",
+  ogImage = "/og-image.jpg",
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? "https://ronijjungle.github.io");
+const fullTitle = title === "Home" ? "Ronij Barahi — Creative Director & Co-Founder" : `${title} — Ronij Barahi`;
+
+// JSON-LD structured data for SEO
+const personSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ronij Barahi",
+  url: "https://ronijjungle.github.io",
+  jobTitle: "Creative Director & Co-Founder",
+  worksFor: {
+    "@type": "Organization",
+    name: "Jungle",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Kathmandu",
+    addressCountry: "NP",
+  },
+  sameAs: [
+    "https://linkedin.com/in/ronijbarahi",
+    "https://instagram.com/ronijbarahi",
+    "https://dribbble.com/ronijbarahi",
+    "https://github.com/ronijbarahi",
+  ],
+  knowsAbout: [
+    "Brand Strategy",
+    "Visual Identity",
+    "Creative Direction",
+    "Digital Design",
+    "UI/UX Design",
+  ],
+});
 ---
 
 <!doctype html>
@@ -26,12 +59,39 @@ const {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
-    <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#191919" />
+    <meta name="generator" content={Astro.generator} />
 
+    <!-- SEO -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="author" content="Ronij Barahi" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site ?? "https://ronijjungle.github.io")} />
+    <meta property="og:site_name" content="Ronij Barahi" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site ?? "https://ronijjungle.github.io")} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={personSchema} />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,7 +99,8 @@ const {
       rel="stylesheet"
     />
 
-    <title>{title} — Ronij Barahi</title>
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body class="flex flex-col min-h-screen">
     <Header />
@@ -48,7 +109,6 @@ const {
     </main>
     <Footer />
 
-    <!-- Scroll-triggered reveal animations -->
     <script>
       const observer = new IntersectionObserver(
         (entries) => {

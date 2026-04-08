@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 \"/Users/ronijbarahi/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/60de8526-38a3-4a9c-8952-fa023ddcfd6e/dc83ea6e-eed7-4a9e-b65d-839c08b59dc8/skills/ui-ux-pro-max/scripts/search.py\" \"portfolio designer minimal dark luxury editorial premium\" --design-system -p \"Designer Portfolio\" -f markdown)",
+      "Bash(python3 \"/Users/ronijbarahi/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/60de8526-38a3-4a9c-8952-fa023ddcfd6e/dc83ea6e-eed7-4a9e-b65d-839c08b59dc8/skills/ui-ux-pro-max/scripts/search.py\" \"animation accessibility scroll reveal dark mode\" --domain ux)",
+      "Bash(python3 \"/Users/ronijbarahi/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/60de8526-38a3-4a9c-8952-fa023ddcfd6e/dc83ea6e-eed7-4a9e-b65d-839c08b59dc8/skills/ui-ux-pro-max/scripts/search.py\" \"layout responsive\" --stack nextjs)",
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(export PATH=\"/usr/local/bin:/opt/homebrew/bin:$PATH\")",
+      "Bash(export PATH=\"$PATH:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin\")",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --yes)",
+      "WebFetch(domain:bratus.co)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(brew install:*)",
+      "Bash(curl -sL https://github.com/cli/cli/releases/download/v2.67.0/gh_2.67.0_macOS_arm64.zip -o /tmp/gh.zip)",
+      "Bash(unzip -o /tmp/gh.zip -d /tmp/gh)",
+      "Read(//tmp/**)",
+      "Bash(/tmp/gh/gh_2.67.0_macOS_arm64/bin/gh --version)",
+      "Bash(/tmp/gh/gh_2.67.0_macOS_arm64/bin/gh auth:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(/tmp/gh/gh_2.67.0_macOS_arm64/bin/gh run:*)",
+      "Bash(/tmp/gh/gh_2.67.0_macOS_arm64/bin/gh api:*)"
+    ]
+  }
+}

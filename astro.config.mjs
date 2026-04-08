@@ -1,16 +1,15 @@
 // ─────────────────────────────────────────────────────────
-// Astro Configuration — the "master control panel" for the site
-// Think of this as the brand's operating manual:
-//   - Which tools (integrations) we use
-//   - How the site gets built and served
+// Astro Configuration
 // ─────────────────────────────────────────────────────────
 
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://ronijbarahi.com",
+  site: "https://ronijjungle.github.io",
   integrations: [
     tailwind(),
+    sitemap(),
   ],
 });
