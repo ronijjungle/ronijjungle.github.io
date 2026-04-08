@@ -25,7 +25,9 @@ export default {
       },
 
       fontFamily: {
-        sans: ['"ABC Ginto Condensed"', "system-ui", "sans-serif"],
+        display: ['"ABC Ginto Condensed"', "system-ui", "sans-serif"],
+        body: ['"ABC Repro"', "system-ui", "sans-serif"],
+        sans: ['"ABC Repro"', "system-ui", "sans-serif"],
       },
 
       // Bratus-inspired type scale: large, bold, editorial

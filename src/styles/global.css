@@ -91,6 +91,72 @@
   font-display: swap;
 }
 
+/* ── ABC Repro — Secondary / Body font ── */
+
+@font-face {
+  font-family: "ABC Repro";
+  src: url("/fonts/ABCRepro-Light-Trial.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Repro";
+  src: url("/fonts/ABCRepro-LightItalic-Trial.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Repro";
+  src: url("/fonts/ABCRepro-Regular-Trial.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Repro";
+  src: url("/fonts/ABCRepro-RegularItalic-Trial.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Repro";
+  src: url("/fonts/ABCRepro-Medium-Trial.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Repro";
+  src: url("/fonts/ABCRepro-MediumItalic-Trial.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Repro";
+  src: url("/fonts/ABCRepro-Bold-Trial.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Repro";
+  src: url("/fonts/ABCRepro-BoldItalic-Trial.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 @layer base {
   html {
     @apply scroll-smooth antialiased;
@@ -98,11 +164,19 @@
   }
 
   body {
-    @apply bg-brand-black text-brand-light-grey font-sans text-body;
+    @apply bg-brand-black text-brand-light-grey font-body text-body;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold text-brand-off-white tracking-tight;
+    @apply font-display font-bold text-brand-off-white tracking-tight uppercase;
+  }
+
+  /* All caps elements use the display font (Ginto Condensed) */
+  .uppercase,
+  .text-display-hero,
+  .text-display-lg,
+  .text-display {
+    font-family: "ABC Ginto Condensed", system-ui, sans-serif;
   }
 
   h1 { @apply text-display-hero; }
