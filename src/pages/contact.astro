@@ -4,7 +4,7 @@
 // ─────────────────────────────────────────────────────────
 
 import Base from "@layouts/Base.astro";
-import ContactForm from "@components/ContactForm.astro";
+import ContactForm from "@components/ContactForm";
 import contact from "@data/contact.json";
 ---
 
@@ -73,7 +73,7 @@ import contact from "@data/contact.json";
         <!-- Right: form -->
         <div class="lg:col-span-7 lg:pl-8">
           <p class="text-micro uppercase text-brand-dark-grey mb-8">Or just fill this out</p>
-          <ContactForm variant="light" />
+          <ContactForm variant="light" client:load />
         </div>
 
       </div>

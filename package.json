@@ -9,8 +9,11 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/react": "^5.0.3",
     "@astrojs/sitemap": "^3.7.2",
-    "astro": "^5.7.10"
+    "astro": "^5.7.10",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",
